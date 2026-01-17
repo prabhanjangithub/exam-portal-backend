@@ -32,26 +32,35 @@ public class UserServiseImpl implements UserServise {
             throw new IllegalArgumentException("User cannot be null");
         }
 
-        Users local = userRepository
-                .findByUsername(user.getUsername())
-                .orElse(null);
-
-        if (local != null) {
+        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
             throw new Exception("User already exists");
         }
 
-        // 🔴 ENCODE PASSWORD (MANDATORY)
+        // ✅ Encode password
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        // Save roles first
+        // ✅ Attach managed Role entity from DB
+        Set<UserRole> finalRoles = new java.util.HashSet<>();
+
         for (UserRole ur : userRoles) {
-            roleRepository.save(ur.getRole());
+
+            String roleName = ur.getRole().getRoleName();
+
+            var roleFromDb = roleRepository
+                    .findByRoleName(roleName)
+                    .orElseThrow(() ->
+                        new RuntimeException("Role not found: " + roleName)
+                    );
+
+            UserRole userRole = new UserRole();
+            userRole.setUser(user);
+            userRole.setRole(roleFromDb);
+
+            finalRoles.add(userRole);
         }
 
-        // Assign roles
-        user.getUserRoles().addAll(userRoles);
+        user.setUserRoles(finalRoles);
 
-        // Save user
         return userRepository.save(user);
     }
 
@@ -64,6 +73,4 @@ public class UserServiseImpl implements UserServise {
     public void detetUser(Long userId) {
         userRepository.deleteById(userId);
     }
-
-    
 }

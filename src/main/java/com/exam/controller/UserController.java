@@ -1,10 +1,11 @@
 package com.exam.controller;
 
+import java.security.Principal;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,8 +38,16 @@ public class UserController {
     public Users createUser(@RequestBody Users user) throws Exception{
          Set<UserRole> roles=new HashSet<>();//A set to hold roles assigned to this user.
     Role role= new Role();
-    role.setRoleId(45L);
-    role.setRoleName("NORMAL");
+    if("ADMIN".equalsIgnoreCase(user.getProfile())){
+        role.setRoleId(44L);
+        role.setRoleName("ROLE_ADMIN");
+    }
+    else{
+        role.setRoleId(45L);
+        role.setRoleName("ROLE_NORMAL");
+    }
+    
+
 
     UserRole userRole=new UserRole();
     userRole.setUser(user);
@@ -62,6 +71,11 @@ public class UserController {
     public void deleteUser(@PathVariable("userId") Long userId)
     {
        this.userServise.detetUser(userId);
+    }
+
+     @GetMapping("/current-user")
+    public Users getCurrentUser(Principal principal) {
+        return userServise.getUsers(principal.getName());
     }
     
 }

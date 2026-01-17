@@ -1,7 +1,8 @@
 package com.exam.security;
 
 
-import org.springframework.security.core.userdetails.User;
+import com.exam.model.Users;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,15 +20,16 @@ public class CustomUserDetailsService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username)
-            throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername (String username) throws UsernameNotFoundException
+    
+    {
+        Users user= userRepository.findByUsername(username)
+        .orElseThrow(()-> new UsernameNotFoundException("user not found"));
 
-        Users user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-
-        return User.withUsername(user.getUsername())
-                .password(user.getPassword()) // BCrypt from DB
-                .roles("USER")
-                .build();
+        return user;
     }
+
+       
+
+
 }
