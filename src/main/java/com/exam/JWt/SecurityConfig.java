@@ -29,8 +29,15 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable()) // 🔴 MUST
             .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
             .authorizeHttpRequests(auth -> auth
+                    //public endpoint
                     .requestMatchers(HttpMethod.POST, "/user/").permitAll()
                     .requestMatchers("/auth/**").permitAll() // 🔴 MUST
+                    //category API
+                    .requestMatchers("/category/**").permitAll()
+                    //protected endpoint
+                    .requestMatchers("/quiz/**").permitAll()
+                    .requestMatchers("/question/**").permitAll()
+                    
                     .requestMatchers("/user/current-user").authenticated()
                     .anyRequest().authenticated()
             )
