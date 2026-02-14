@@ -14,15 +14,20 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
    
+private static final Logger logger = LoggerFactory.getLogger(SecurityConfig.class);
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http,  JwtFilter jwtFilter) throws Exception {
-
+        logger.info("Initializing Security Filter Chain");
         http
             .cors()
             .and()
@@ -44,7 +49,7 @@ public class SecurityConfig {
             .sessionManagement(session ->
                     session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             );
-
+        logger.info("Security configuration completed successfully");
         return http.build();
     }
 

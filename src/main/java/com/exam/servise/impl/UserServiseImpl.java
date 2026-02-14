@@ -12,9 +12,14 @@ import com.exam.model.Users;
 import com.exam.repo.RoleRepository;
 import com.exam.repo.UserRepository;
 import com.exam.servise.UserServise;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 @Service
 public class UserServiseImpl implements UserServise {
+    private static final Logger logger = LoggerFactory.getLogger(UserServiseImpl.class);
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -29,10 +34,13 @@ public class UserServiseImpl implements UserServise {
     public Users createUser(Users user, Set<UserRole> userRoles) throws Exception {
 
         if (user == null) {
+            logger.error("Attempted to create null user");
             throw new IllegalArgumentException("User cannot be null");
         }
 
         if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+            logger.warn("User already exists with username: {}", user.getUsername());
+
             throw new Exception("User already exists");
         }
 
@@ -45,10 +53,13 @@ public class UserServiseImpl implements UserServise {
         for (UserRole ur : userRoles) {
 
             String roleName = ur.getRole().getRoleName();
+            logger.info("Assigning role '{}' to user '{}'", roleName, user.getUsername());
+
 
             var roleFromDb = roleRepository
                     .findByRoleName(roleName)
                     .orElseThrow(() ->
+                    
                         new RuntimeException("Role not found: " + roleName)
                     );
 
@@ -60,17 +71,35 @@ public class UserServiseImpl implements UserServise {
         }
 
         user.setUserRoles(finalRoles);
+        logger.info("User created successfully with ID: {}", user.getId());
 
         return userRepository.save(user);
     }
 
-    @Override
+   @Override
     public Users getUsers(String username) {
-        return userRepository.findByUsername(username).orElse(null);
+
+        logger.info("Fetching user with username: {}", username);
+
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> {
+                    logger.warn("User not found with username: {}", username);
+                    return new RuntimeException("User not found");
+                });
     }
 
     @Override
     public void detetUser(Long userId) {
+
+        logger.warn("Deleting user with ID: {}", userId);
+
+        if (!userRepository.existsById(userId)) {
+            logger.error("User not found for deletion with ID: {}", userId);
+            throw new RuntimeException("User not found");
+        }
+
         userRepository.deleteById(userId);
+
+        logger.info("User deleted successfully with ID: {}", userId);
     }
 }

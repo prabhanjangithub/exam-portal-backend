@@ -21,11 +21,17 @@ import com.exam.model.exam.Quiz;
 import com.exam.servise.QuestionServices;
 import com.exam.servise.QuizService;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import jakarta.websocket.server.PathParam;
 
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
+    private static final Logger logger = LoggerFactory.getLogger(QuestionController.class);
+
 
     @Autowired
     private QuestionServices services;
@@ -34,6 +40,9 @@ public class QuestionController {
     @PostMapping("/")
     public ResponseEntity<Question> add(@RequestBody Question question)
     {
+        
+        logger.info("Question added successfully with ID: {}", question.getQueId());
+
         return ResponseEntity.ok(this.services.addQuestion(question));
     }
 
@@ -42,6 +51,8 @@ public class QuestionController {
     @PutMapping("/")
     public ResponseEntity <Question> update(@RequestBody Question question)
     {
+        logger.info("Updating question with ID: {}", question.getQueId());
+        
         return ResponseEntity.ok(this.services.updateQuestion(question));
 
     }
@@ -49,6 +60,8 @@ public class QuestionController {
     @GetMapping("/quiz/{qid}")
     public ResponseEntity <?> getQuestionsOfQuiz(@PathVariable("qid") Long qid)
     {
+        logger.info("Fetching questions for quiz ID: {}", qid);
+
     //     Quiz quiz= new Quiz();
     //     quiz.setqId(qid); 
         
@@ -58,8 +71,12 @@ public class QuestionController {
    Quiz quiz=  this.quizService.getQuiz(qid);
    Set<Question> question=  quiz.getQuestion();
    List list= new ArrayList(question);
+   logger.debug("Total questions available in DB: {}", list.size());
+
    if(list.size() > Integer.parseInt(quiz.getNumberOfquestion()))
    {
+    logger.info("Limiting questions to max count: {}");
+    
     list = list.subList(0,Integer.parseInt(quiz.getNumberOfquestion()+1));
 
 
@@ -71,6 +88,8 @@ public class QuestionController {
     public Question get(@PathVariable("queId") Long qusId)
     
     {
+        logger.info("Fetching question with ID: {}", qusId);
+
         return this.services.getQuestion(qusId);
     }
 
@@ -78,7 +97,9 @@ public class QuestionController {
     
         public void delete(@PathVariable("queId") Long queId)
         {
+                logger.warn("Deleting question with ID: {}", queId);
                 this.services.deleteQuestion(queId);
+                logger.info("Question deleted successfully with ID: {}", queId);
         }
 
 }

@@ -1,0 +1,352 @@
+2026-02-14 21:24:34 [main] INFO  com.exam.ExamserverApplication - Starting ExamserverApplication using Java 22.0.2 with PID 40864 (D:\examportal_1\exam-portal-backend\target\classes started by prabh in D:\examportal_1\exam-portal-backend)
+2026-02-14 21:24:34 [main] DEBUG com.exam.ExamserverApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-02-14 21:24:34 [main] INFO  com.exam.ExamserverApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 21:24:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 21:24:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 5 JPA repository interfaces.
+2026-02-14 21:24:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-14 21:24:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-14 21:24:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-14 21:24:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-02-14 21:24:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-14 21:24:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1824 ms
+2026-02-14 21:24:36 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 21:24:36 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-02-14 21:24:37 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-14 21:24:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 21:24:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-14 21:24:37 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cbc3c2
+2026-02-14 21:24:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-14 21:24:37 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-14 21:24:37 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-14 21:24:37 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 21:24:39 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 21:24:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 21:24:39 [main] DEBUG com.exam.JWt.JwtFilter - Filter 'jwtFilter' configured for use
+2026-02-14 21:24:39 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-14 21:24:39 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 21:24:40 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-14 21:24:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-14 21:24:40 [main] INFO  com.exam.ExamserverApplication - Started ExamserverApplication in 6.684 seconds (process running for 7.133)
+2026-02-14 21:25:38 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 21:25:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-14 21:25:38 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-02-14 21:25:38 [http-nio-8080-exec-1] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 21:25:38 [http-nio-8080-exec-1] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 21:26:16 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - Received request to create user with username: eee
+2026-02-14 21:26:16 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - Assigning NORMAL role to user: eee
+2026-02-14 21:26:16 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - User created successfully with ID: null
+2026-02-14 22:00:14 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m4s522ms363µs700ns).
+2026-02-14 22:13:35 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14 22:13:35 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-02-14 22:13:35 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 22:13:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-02-14 22:13:35 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-02-14 22:13:49 [main] INFO  com.exam.ExamserverApplication - Starting ExamserverApplication using Java 22.0.2 with PID 12432 (D:\examportal_1\exam-portal-backend\target\classes started by prabh in D:\examportal_1\exam-portal-backend)
+2026-02-14 22:13:49 [main] DEBUG com.exam.ExamserverApplication - Running with Spring Boot v3.5.0, Spring v6.2.7
+2026-02-14 22:13:49 [main] INFO  com.exam.ExamserverApplication - No active profile set, falling back to 1 default profile: "default"
+2026-02-14 22:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14 22:13:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 5 JPA repository interfaces.
+2026-02-14 22:13:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-02-14 22:13:51 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-02-14 22:13:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-02-14 22:13:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+2026-02-14 22:13:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-02-14 22:13:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2426 ms
+2026-02-14 22:13:51 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-14 22:13:52 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2026-02-14 22:13:52 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-02-14 22:13:52 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14 22:13:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-02-14 22:13:53 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18cbc3c2
+2026-02-14 22:13:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-02-14 22:13:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-14 22:13:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-02-14 22:13:53 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-02-14 22:13:54 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-14 22:13:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14 22:13:55 [main] DEBUG com.exam.JWt.JwtFilter - Filter 'jwtFilter' configured for use
+2026-02-14 22:13:55 [main] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2026-02-14 22:13:55 [main] INFO  com.exam.JWt.CorsConfig - Configuring CORS for allowed origin: http://localhost:4200
+2026-02-14 22:13:55 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14 22:13:55 [main] INFO  com.exam.JWt.CorsConfig - CORS configuration applied successfully.
+2026-02-14 22:13:56 [main] INFO  com.exam.JWt.SecurityConfig - Initializing Security Filter Chain
+2026-02-14 22:13:56 [main] INFO  com.exam.JWt.SecurityConfig - Security configuration completed successfully
+2026-02-14 22:13:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-02-14 22:13:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-02-14 22:13:56 [main] INFO  com.exam.ExamserverApplication - Started ExamserverApplication in 8.339 seconds (process running for 9.074)
+2026-02-14 22:15:13 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-02-14 22:15:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-02-14 22:15:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-02-14 22:15:13 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /auth/login
+2026-02-14 22:15:13 [http-nio-8080-exec-2] INFO  com.exam.JWt.AuthController - Login attempt for username: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-2] INFO  com.exam.JWt.AuthController - Authentication successful for username: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-2] INFO  com.exam.JWt.AuthController - JWT token generated for username: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:15:14 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-3] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-3] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:15:14 [http-nio-8080-exec-3] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:15:17 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:15:17 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:15:17 [http-nio-8080-exec-7] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:15:17 [http-nio-8080-exec-7] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:15:17 [http-nio-8080-exec-7] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:15:21 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:15:21 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:15:21 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:42:18 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:42:18 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:42:18 [http-nio-8080-exec-10] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:42:18 [http-nio-8080-exec-10] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:42:18 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:42:18 [http-nio-8080-exec-5] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:42:18 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:42:18 [http-nio-8080-exec-5] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:42:44 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:42:44 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:42:44 [http-nio-8080-exec-3] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:42:44 [http-nio-8080-exec-3] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:42:44 [http-nio-8080-exec-3] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:42:44 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:42:44 [http-nio-8080-exec-4] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:42:44 [http-nio-8080-exec-4] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:43:07 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:43:07 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:43:07 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:43:07 [http-nio-8080-exec-8] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:43:07 [http-nio-8080-exec-8] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:43:07 [http-nio-8080-exec-9] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:43:07 [http-nio-8080-exec-9] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:43:07 [http-nio-8080-exec-9] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:44:58 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:44:58 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:44:58 [http-nio-8080-exec-1] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:44:58 [http-nio-8080-exec-1] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:44:58 [http-nio-8080-exec-1] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:44:58 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:44:58 [http-nio-8080-exec-2] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:44:58 [http-nio-8080-exec-2] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:45:44 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:45:44 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:45:44 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:45:44 [http-nio-8080-exec-6] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:45:44 [http-nio-8080-exec-7] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:45:44 [http-nio-8080-exec-6] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:45:44 [http-nio-8080-exec-7] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:45:44 [http-nio-8080-exec-7] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:46:45 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:46:45 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:46:45 [http-nio-8080-exec-10] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:46:45 [http-nio-8080-exec-10] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:46:45 [http-nio-8080-exec-10] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:46:59 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:46:59 [http-nio-8080-exec-1] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:46:59 [http-nio-8080-exec-1] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:47:02 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:47:02 [http-nio-8080-exec-2] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:47:02 [http-nio-8080-exec-2] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:47:05 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:47:05 [http-nio-8080-exec-4] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:47:05 [http-nio-8080-exec-4] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:56:55 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:56:55 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:56:55 [http-nio-8080-exec-8] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:56:55 [http-nio-8080-exec-8] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:56:55 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:56:55 [http-nio-8080-exec-6] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:56:55 [http-nio-8080-exec-6] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:56:55 [http-nio-8080-exec-6] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:57:13 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:57:13 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:57:13 [http-nio-8080-exec-5] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:57:13 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:57:13 [http-nio-8080-exec-5] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:57:13 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:57:13 [http-nio-8080-exec-1] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:57:13 [http-nio-8080-exec-1] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 22:59:42 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 22:59:42 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 22:59:42 [http-nio-8080-exec-3] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 22:59:42 [http-nio-8080-exec-3] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 22:59:42 [http-nio-8080-exec-3] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 22:59:42 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 22:59:42 [http-nio-8080-exec-4] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 22:59:42 [http-nio-8080-exec-4] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:10:19 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:10:19 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:10:19 [http-nio-8080-exec-8] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:10:19 [http-nio-8080-exec-8] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:10:19 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:10:19 [http-nio-8080-exec-6] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:10:19 [http-nio-8080-exec-6] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:10:19 [http-nio-8080-exec-6] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:12:11 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:12:11 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:12:11 [http-nio-8080-exec-5] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:12:11 [http-nio-8080-exec-5] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:12:11 [http-nio-8080-exec-5] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:12:11 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:12:11 [http-nio-8080-exec-1] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:12:11 [http-nio-8080-exec-1] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:14:16 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:14:16 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:14:16 [http-nio-8080-exec-3] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:14:16 [http-nio-8080-exec-3] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:14:16 [http-nio-8080-exec-3] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:14:16 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:14:16 [http-nio-8080-exec-4] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:14:16 [http-nio-8080-exec-4] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:14:20 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:14:20 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' is not supported]
+2026-02-14 23:15:13 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:15:13 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:15:13 [http-nio-8080-exec-10] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:15:13 [http-nio-8080-exec-10] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:15:13 [http-nio-8080-exec-10] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:15:14 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:15:14 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:15:14 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:15:26 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/104
+2026-02-14 23:15:26 [http-nio-8080-exec-2] WARN  c.exam.controller.CategoryController - Deleting category with ID: 104
+2026-02-14 23:15:27 [http-nio-8080-exec-2] INFO  c.exam.servise.CategoryServiceImpl - Category deleted successfully with ID: 104
+2026-02-14 23:15:27 [http-nio-8080-exec-2] INFO  c.exam.controller.CategoryController - Category deleted successfully with ID: 104
+2026-02-14 23:15:35 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:15:35 [http-nio-8080-exec-3] ERROR com.exam.JWt.JwtFilter - JWT processing failed: JWT expired at 2026-02-14T17:45:14Z. Current time: 2026-02-14T17:45:35Z, a difference of 21399 milliseconds.  Allowed clock skew: 0 milliseconds.
+2026-02-14 23:15:35 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:15:35 [http-nio-8080-exec-4] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:15:35 [http-nio-8080-exec-4] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:15:42 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /auth/login
+2026-02-14 23:15:42 [http-nio-8080-exec-10] INFO  com.exam.JWt.AuthController - Login attempt for username: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-10] INFO  com.exam.JWt.AuthController - Authentication successful for username: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-10] INFO  com.exam.JWt.AuthController - JWT token generated for username: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:15:42 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-9] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-9] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:15:42 [http-nio-8080-exec-9] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:15:44 [http-nio-8080-exec-5] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:15:44 [http-nio-8080-exec-5] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:15:44 [http-nio-8080-exec-5] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:15:48 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/103
+2026-02-14 23:15:48 [http-nio-8080-exec-3] WARN  c.exam.controller.CategoryController - Deleting category with ID: 103
+2026-02-14 23:15:48 [http-nio-8080-exec-3] INFO  c.exam.servise.CategoryServiceImpl - Category deleted successfully with ID: 103
+2026-02-14 23:15:48 [http-nio-8080-exec-3] INFO  c.exam.controller.CategoryController - Category deleted successfully with ID: 103
+2026-02-14 23:15:55 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:15:55 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:15:55 [http-nio-8080-exec-6] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:15:55 [http-nio-8080-exec-6] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:15:55 [http-nio-8080-exec-6] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:15:57 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:15:57 [http-nio-8080-exec-7] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:15:57 [http-nio-8080-exec-7] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:16:03 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/102
+2026-02-14 23:16:03 [http-nio-8080-exec-9] WARN  c.exam.controller.CategoryController - Deleting category with ID: 102
+2026-02-14 23:16:03 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Category deleted successfully with ID: 102
+2026-02-14 23:16:03 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - Category deleted successfully with ID: 102
+2026-02-14 23:17:48 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:17:48 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:17:48 [http-nio-8080-exec-1] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:17:48 [http-nio-8080-exec-1] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:17:48 [http-nio-8080-exec-1] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:17:48 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:17:48 [http-nio-8080-exec-2] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:17:48 [http-nio-8080-exec-2] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:17:53 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/52
+2026-02-14 23:17:53 [http-nio-8080-exec-6] WARN  c.exam.controller.CategoryController - Deleting category with ID: 52
+2026-02-14 23:17:53 [http-nio-8080-exec-6] INFO  c.exam.servise.CategoryServiceImpl - Category deleted successfully with ID: 52
+2026-02-14 23:17:53 [http-nio-8080-exec-6] INFO  c.exam.controller.CategoryController - Category deleted successfully with ID: 52
+2026-02-14 23:18:10 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:18:10 [http-nio-8080-exec-10] INFO  c.exam.controller.CategoryController - Received request to add category with title: fasdfadffasdfa
+2026-02-14 23:18:10 [http-nio-8080-exec-10] INFO  c.exam.servise.CategoryServiceImpl - Category saved successfully with ID: null
+2026-02-14 23:18:10 [http-nio-8080-exec-10] INFO  c.exam.controller.CategoryController - Category added successfully with ID: 152
+2026-02-14 23:18:13 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:18:13 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:18:13 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:32:15 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:32:15 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:32:15 [http-nio-8080-exec-1] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:32:15 [http-nio-8080-exec-1] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:32:15 [http-nio-8080-exec-1] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:32:32 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /auth/login
+2026-02-14 23:32:32 [http-nio-8080-exec-3] INFO  com.exam.JWt.AuthController - Login attempt for username: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-3] INFO  com.exam.JWt.AuthController - Authentication successful for username: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-3] INFO  com.exam.JWt.AuthController - JWT token generated for username: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:32:32 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Validating token for user: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-4] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-4] INFO  com.exam.controller.UserController - Fetching current logged-in user: eee
+2026-02-14 23:32:32 [http-nio-8080-exec-4] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: eee
+2026-02-14 23:32:44 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Processing request: /auth/login
+2026-02-14 23:32:44 [http-nio-8080-exec-7] INFO  com.exam.JWt.AuthController - Login attempt for username: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-7] INFO  com.exam.JWt.AuthController - Authentication successful for username: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-7] INFO  com.exam.JWt.AuthController - JWT token generated for username: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:32:44 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-8] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-8] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:32:44 [http-nio-8080-exec-8] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:32:48 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:32:48 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:32:48 [http-nio-8080-exec-10] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:32:48 [http-nio-8080-exec-10] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:32:48 [http-nio-8080-exec-10] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:32:53 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:32:53 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:32:53 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:53:31 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m6s701ms433µs700ns).
+2026-02-14 23:54:10 [http-nio-8080-exec-2] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:54:10 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:54:10 [http-nio-8080-exec-2] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:54:10 [http-nio-8080-exec-2] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:54:10 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:54:11 [http-nio-8080-exec-1] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:54:11 [http-nio-8080-exec-1] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:54:11 [http-nio-8080-exec-1] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:54:14 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:54:14 [http-nio-8080-exec-4] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:54:14 [http-nio-8080-exec-4] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:54:14 [http-nio-8080-exec-4] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:54:14 [http-nio-8080-exec-4] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:54:18 [http-nio-8080-exec-8] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:54:18 [http-nio-8080-exec-8] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:54:18 [http-nio-8080-exec-8] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:54:19 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:54:19 [http-nio-8080-exec-10] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:54:19 [http-nio-8080-exec-10] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:54:19 [http-nio-8080-exec-10] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:54:19 [http-nio-8080-exec-10] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:54:23 [http-nio-8080-exec-9] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:54:23 [http-nio-8080-exec-9] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:54:23 [http-nio-8080-exec-9] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:54:43 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:54:43 [http-nio-8080-exec-3] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:54:43 [http-nio-8080-exec-3] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:54:43 [http-nio-8080-exec-3] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:54:43 [http-nio-8080-exec-3] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:54:53 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:54:53 [http-nio-8080-exec-1] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:54:53 [http-nio-8080-exec-1] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:54:53 [http-nio-8080-exec-1] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:54:53 [http-nio-8080-exec-1] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
+2026-02-14 23:54:56 [http-nio-8080-exec-7] DEBUG com.exam.JWt.JwtFilter - Processing request: /category/
+2026-02-14 23:54:56 [http-nio-8080-exec-7] INFO  c.exam.controller.CategoryController - fetching all categories
+2026-02-14 23:54:56 [http-nio-8080-exec-7] INFO  c.exam.servise.CategoryServiceImpl - Fetching all categories from database
+2026-02-14 23:55:00 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Processing request: /user/current-user
+2026-02-14 23:55:00 [http-nio-8080-exec-6] DEBUG com.exam.JWt.JwtFilter - Validating token for user: kkk
+2026-02-14 23:55:00 [http-nio-8080-exec-6] INFO  com.exam.JWt.JwtFilter - JWT authentication successful for user: kkk
+2026-02-14 23:55:00 [http-nio-8080-exec-6] INFO  com.exam.controller.UserController - Fetching current logged-in user: kkk
+2026-02-14 23:55:00 [http-nio-8080-exec-6] INFO  c.exam.servise.impl.UserServiseImpl - Fetching user with username: kkk
